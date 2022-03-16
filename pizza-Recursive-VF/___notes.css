@@ -1,0 +1,88 @@
+
+/**
+  font source:
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&display=swap" rel="stylesheet">
+ */
+
+/* CODING SUBSET */
+
+:root {
+  /* Start with axis defaults. Exclude weight, which is better controlled via the usual font-weight CSS property */
+  --MONO: 0;   /* Monospace    */
+  --CASL: 0;   /* Casual       */
+  --slnt: 0;   /* Upright      */
+  --CRSV: 0.5; /* Auto Cursive */
+}
+
+*,
+*:before,
+*:after {
+  font-variation-settings: 
+  "MONO" var(--MONO),
+  "CASL" var(--CASL),
+  "slnt" var(--slnt),
+  "CRSV" var(--CRSV);
+}
+
+h1 {
+  --CASL: 1;   /* Casual       */
+  --slnt: 0;
+  --MONO: 1;   /* Monospace    */
+  font-size: 3rem;
+  word-spacing:-0.6em;
+  font-weight: 300;
+  word-break: break-all;
+  line-height: 1;
+  animation: weightShift 5s infinite alternate;
+  transition: 0.75s;
+  margin: 0;
+  text-align: center;
+}
+
+h1:hover {
+  --slnt: -7;
+  --CRSV: 0;
+  font-weight: 300;
+}
+
+h1 span {
+  font-weight: 1000;
+  transition: 1s;
+}
+
+h1:hover span {
+  font-weight: 300;
+}
+
+h2 {
+  --CASL: 1;
+  --slnt: 0;
+  --MONO: 1;
+  font-size: 2rem;
+  text-align: center;
+}
+
+h2:hover {
+  --slnt: -10;
+  --CRSV: 0;
+  font-weight: 800;
+}
+
+p {
+  --MONO: 1;
+  font-weight: 300;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+p:hover {
+  --slnt: -10;
+  --CRSV: 0;
+  font-weight: 800;
+  transition: 1s;
+}
+
+a {
+  --slnt: -10;
+  color: inherit;
+}
